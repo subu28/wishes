@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="viddiv">
+    <video id="vid" src="./amazongift.mp4"></video>
+    <div id="button">&#x23f5;</div>
+  </div>
+</body>
+<script>
+  var vid = document.getElementById('vid');
+  var button = document.getElementById('button');
+  button.addEventListener('click', function() {
+    if(vid.paused) {
+      vid.play();
+      button.innerHTML = '&#x23f8;';
+      button.style.opacity = 0;
+    }
+    vid.onended = function() {
+      button.innerHTML = '&#x23f5;';
+      button.style.opacity = 1;
+    }
+  });
+</script>
+</html>
