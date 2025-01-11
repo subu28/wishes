@@ -33,7 +33,7 @@ html,body {
   text-align: center;
   overflow: visible;
   height: 0;
-  opacity: 0;
+  display: none;
 }
 
 #mailbutton {
@@ -42,4 +42,18 @@ html,body {
   padding: 3px;
   font-size: 30px;
   cursor: pointer;
+}
+
+#header {
+  text-align: center;
+  overflow: visible;
+  height: 0;
+  position: relative;
+  top: -450px;
+  color: #2a3443;
+  display: none;
+}
+
+#headerspan {
+  font-size: 30px;
 }

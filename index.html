@@ -24,6 +24,12 @@
       <br>
       <span id="help"></span>
     </div>
+    <div id="header">
+      <span id="headerspan">Wishing you a lifetime of love and happiness!</span>
+      <br>
+      <br>
+      <span>From Subhash, Snehal, Sadique, Eswaran, Kartik and families</span>
+    </div>
   </div>
 
 </body>
@@ -33,6 +39,7 @@
   var codesend = document.getElementById('codesend');
   var mailbutton = document.getElementById('mailbutton');
   var help = document.getElementById('help');
+  var header = document.getElementById('header');
   let clicked = false;
   button.addEventListener('click', function() {
     if(vid.paused) {
@@ -41,7 +48,8 @@
     }
     vid.onended = function() {
       button.style.opacity = 1;
-      codesend.style.opacity = 1;
+      codesend.style.display = 'block';
+      header.style.display = 'block';
     }
   });
   mailbutton.addEventListener('click', async function() {
