@@ -39,5 +39,19 @@
       codesend.style.opacity = 1;
     }
   });
+  mailbutton.addEventListener('click', async function() {
+    mailbutton.innerHTML = 'Sending code...';
+    try {
+      (await fetch('https://yemqzae909.execute-api.us-west-2.amazonaws.com/default/sendwish')).json().then(data => {
+        if (data.status === 'success') {
+          mailbutton.innerHTML = 'Code sent successfully';
+        } else {
+          mailbutton.innerHTML = 'Code sending failed';
+        }
+      });
+    } catch (e) {
+      mailbutton.innerHTML = 'Code sending failed';
+    }
+  });
 </script>
 </html>
