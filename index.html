@@ -19,7 +19,7 @@
       <span id="mailbutton">click here to get your code.</span>
       <br>
       <br>
-      Your code will be sent to your we.*****@gmail.com mail id
+      Your code will be sent to your Kanish*****@gmail.com mail id
       <br>
       <br>
       <span id="help"></span>
@@ -28,7 +28,7 @@
       <span id="headerspan">Wishing you a lifetime of love and happiness!</span>
       <br>
       <br>
-      <span>From Subhash, Snehal, Sadique, Eswaran, Kartik and families</span>
+      <span>From Subhash, Snehal, Sumit and families</span>
     </div>
   </div>
 
@@ -61,7 +61,7 @@
     mailbutton.innerHTML = 'Sending code...';
     help.innerHTML = 'If you have problems retrieving the code. please contact help@sanyaas.org \<br\> Also check your spam folder';
     try {
-      (await fetch('https://yemqzae909.execute-api.us-west-2.amazonaws.com/default/sendwish')).json().then(data => {
+      (await fetch('https://i5wge0zpsl.execute-api.us-west-2.amazonaws.com/default')).json().then(data => {
         if (data.status === 'success') {
           mailbutton.innerHTML = 'Code sent successfully !!';
         } else {
