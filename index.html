@@ -61,7 +61,7 @@
     mailbutton.innerHTML = 'Sending code...';
     help.innerHTML = 'If you have problems retrieving the code. please contact help@sanyaas.org \<br\> Also check your spam folder';
     try {
-      (await fetch('https://i5wge0zpsl.execute-api.us-west-2.amazonaws.com/default')).json().then(data => {
+      (await fetch('https://i5wge0zpsl.execute-api.us-west-2.amazonaws.com/default/wishes')).json().then(data => {
         if (data.status === 'success') {
           mailbutton.innerHTML = 'Code sent successfully !!';
         } else {
